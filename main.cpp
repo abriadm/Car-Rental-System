@@ -185,6 +185,20 @@ void gotoxy(int x, int y)
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
+void load()
+{
+	Boarder();
+	int timer = 5 + rand() % 20;
+	int row, col, r, c, q;
+	gotoxy(60,36);
+	for (r = 1; r < timer; r++)
+	{
+		for (q = 0; q < 100000000; q++); // to dislay character slowly
+		printf("%c", 177);
+	}
+	Sleep(100);
+	system("cls");
+}
 
 int main()
 {
