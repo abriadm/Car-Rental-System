@@ -31,6 +31,17 @@ struct customer
 	char address[1500];
 };
 
+struct pass
+{
+	int ID;
+	char passWord[20];
+};
+
+pass userPass[1000];
+car rent[1000];
+customer cust[1000];
+car avail[1000];
+
 int main()
 {
 
