@@ -200,6 +200,23 @@ void load()
 	system("cls");
 }
 
+void load_CHECK()
+{
+	Boarder();
+	int timer = rand() % 5 + 1;
+	int row, col, r, c, q;
+	gotoxy(65,34);
+	printf("LOG IN....");
+	gotoxy(60, 36);
+	for (r = 1; r < timer; r++)
+	{
+		for (q = 0; q < 100000000; q++); // to display character slowly
+		printf("%c", 177);
+	}
+	Sleep(100);
+	system("cls");
+}
+
 int main()
 {
 
