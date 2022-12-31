@@ -50,6 +50,17 @@ void fullscreen()
 	keybd_event(VK_MENU,0x38,KEYEVENTF_KEYUP,0);
 }
 
+const string currentDateTime()
+{
+	time_t now = time(0);
+	struct tm tstruct;
+	char buf[80];
+	tstruct = *localtime(&now);
+	strftime(buf, sizeof(buf), "%d/%m/%Y Time: %x", &tstruct);
+
+	return buf;
+}
+
 int main()
 {
 
