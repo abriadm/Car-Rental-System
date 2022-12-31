@@ -61,6 +61,17 @@ const string currentDateTime()
 	return buf;
 }
 
+const string Date()
+{
+	time_t now = time(0);
+	struct tm tstruct;
+	char buf[80];
+	tstruct = *localtime(&now);
+	strftime(buf, sizeof(buf), "%d/%m/%Y Time: %x", &tstruct);
+
+	return buf;
+}
+
 int main()
 {
 
