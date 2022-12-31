@@ -22,6 +22,15 @@ struct car
 	char transmission[6];
 };
 
+struct customer
+{
+	int id;
+	char name[100];
+	char phone[15];
+	char ic[15];
+	char address[1500];
+};
+
 int main()
 {
 
